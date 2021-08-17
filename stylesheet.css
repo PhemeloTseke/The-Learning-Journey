@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-size: 17px;
+}
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100vw;
+    height: 12vh;
+    /*background-color: rgb(0, 0, 0);*/
+    background: linear-gradient(rgba(253, 94, 83, 1), rgb(255, 89, 77));
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 35px;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+}
+
+nav span {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 200;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #fe92a6;
+    font-size: 20px;
+}
+
+nav a:active {
+    border: 5px dotted #fe92a6;
+    font-size: 20px;
+}
+
+nav ul {
+    padding-right: 25px;
+    margin: 0 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    border-right: 1px solid white;
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+@media screen and (max-width: 770px) {
+    nav {
+        font-size: 10px;
+        justify-content: center;
+    }
+    nav ul {
+        display: none;
+    }
+}
+
+
+/*Banner*/
+
+.banner {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/banner_wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.banner-text {
+    width: 490px;
+    height: 60%;
+    position: relative;
+    bottom: 25px;
+    margin-left: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.banner p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-size: 10px;
+    color: silver;
+}
+
+.banner h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 770px) {
+    .banner {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    .banner-text {
+        width: 290px;
+        position: relative;
+        bottom: 50px;
+        margin-left: 25px;
+    }
+    .banner h2 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .banner-text {
+        margin-left: 10px;
+    }
+}
+
+
+/*ABOUT ME*/
+
+.about-me,
+.zuri {
+    width: 100vw;
+    height: 88vh;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    background: url(./images/background-shapes-two.png);
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container,
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.first {
+    margin-right: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.first p,
+.second p,
+.second li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 89, 77);
+}
+
+a:hover {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.about-me h2,
+.zuri h2,
+figcaption {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.about-me span {
+    font-style: oblique;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+    .about-me,
+    .zuri {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .container,
+    figure {
+        width: 100%;
+    }
+    .about-me h2,
+    .zuri h2,
+    figcaption {
+        font-size: 30px;
+    }
+}
+
+
+/*TUTORIALS*/
+
+.tutorials {
+    width: 100vw;
+    height: 88vh;
+    overflow: hidden;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./images/banner_wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.align,
+.second ul {
+    align-self: flex-start;
+}
+
+iframe {
+    margin: 5px;
+    overflow: hidden;
+    width: 724px;
+    height: 407px;
+}
+
+figcaption {
+    color: white;
+    margin: 15px 0;
+}
+
+@media screen and (max-width: 770px) {
+    .tutorials {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5vh;
+    }
+    iframe {
+        width: 100vmin;
+        height: auto;
+    }
+}
+
+
+/*FOOTER - CONTACT PAGE*/
+
+footer {
+    width: 100vw;
+    height: 20vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(./images/banner_wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+footer ul li {
+    display: inline-block;
+    border-right: 1px solid rgb(255, 89, 77);
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+footer ul li:last-child {
+    border-right: none;
+}
